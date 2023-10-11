@@ -3,16 +3,74 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+Ways to get help
 
 ```{r}
-plot(cars)
+help("+")
+?"+"
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+pre build data, data to practice
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+```{r}
+data()
+```
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+We can use pre-build data by using the name listed on data() result.
+
+```{r}
+CO2
+```
+
+We have also some constant pre-build in the code like:
+
+```{r}
+pi
+
+```
+
+```{r}
+Inf
+```
+
+```{r}
+99999999 > Inf
+```
+
+```{r}
+help(Inf)
+```
+
+## Naming variables
+
+words are separated by \_
+
+```{r}
+a <- -1
+b <- 3
+c <- 5
+
+solution_1 <- (-b + sqrt(b^2 - 4*a*c))/ (2 *a)
+solution_2 <- (-b - sqrt(b^2 - 4*a*c))/ (2 *a)
+
+solution_1
+```
+
+## Comments
+
+```{r}
+## This is a comment
+
+```
+
+## Nested Function
+
+Functions are evaluated from the inside out
+
+```{r}
+exp(1)
+log(2.718282)
+
+## nested function
+log(exp(1))
+```
